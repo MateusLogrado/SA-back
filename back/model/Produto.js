@@ -1,0 +1,46 @@
+const { DataTypes, Model } = require("sequelize")
+const db = require("../db/conn")
+
+const Produto = db.define("produto", {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    title: {
+        type: DataTypes.STRING(35),
+        allowNull: false
+    },
+    description: {
+        type: DataTypes.STRING(300),
+        allowNull: false
+    },
+    category: {
+        type: DataTypes.STRING(35),
+        allowNull: false
+    },
+    price: {
+        type: DataTypes.FLOAT(6,2),
+        allowNull: false
+    },
+    discountPercentage: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    stock: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    brand: {
+        type: DataTypes.STRING(20),
+        allowNull: false
+    },
+    thumbnail: {
+        type: DataTypes.STRING(100),
+        allowNull: false
+    }
+}, {
+    timestamps: false
+})
+
+module.exports = Produto
