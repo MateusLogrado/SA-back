@@ -1,0 +1,46 @@
+const { DataTypes, Model } = require("sequelize")
+const db = require("../db/conn")
+
+const Usuario = db.define("usuario", {
+    id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
+    },
+    firstName: {
+        type: DataTypes.STRING(35),
+        allowNull: false
+    },
+    lastName: {
+        type: DataTypes.STRING(35),
+        allowNull: false
+    },
+    age: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    email: {
+        type: DataTypes.STRING(35),
+        allowNull: false
+    },
+    phone: {
+        type: DataTypes.STRING(20),
+        allowNull: false
+    },
+    city: {
+        type: DataTypes.STRING(35),
+        allowNull: false
+    },
+    state: {
+        type: DataTypes.STRING(35),
+        allowNull: false
+    },
+    birthDate: {
+        type: DataTypes.DATE,
+        allowNull: false
+    }
+},{
+    timestamps: false
+})
+
+module.exports = Usuario
