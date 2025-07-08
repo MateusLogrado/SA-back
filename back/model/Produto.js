@@ -1,4 +1,4 @@
-const { DataTypes, Model } = require("sequelize")
+const { DataTypes } = require("sequelize")
 const db = require("../db/conn")
 
 const Produto = db.define("produto", {
@@ -20,7 +20,7 @@ const Produto = db.define("produto", {
         allowNull: false
     },
     price: {
-        type: DataTypes.FLOAT(6,2),
+        type: DataTypes.FLOAT(10,2),
         allowNull: false
     },
     discountPercentage: {
