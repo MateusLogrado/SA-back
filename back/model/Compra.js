@@ -35,6 +35,7 @@ const Compra = db.define("compra", {
         allowNull: false
     }
 }, {
+    tableName: "compras",
     timestamps: false
 })
 

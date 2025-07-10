@@ -2,7 +2,7 @@ const { DataTypes, Model } = require("sequelize")
 const db = require("../db/conn")
 
 const Usuario = db.define("usuario", {
-    id: {
+    usuarioId: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
@@ -40,6 +40,7 @@ const Usuario = db.define("usuario", {
         allowNull: false
     }
 },{
+    tableName: "usuarios",
     timestamps: false
 })
 
