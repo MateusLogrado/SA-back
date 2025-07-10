@@ -14,3 +14,14 @@ Compra.belongsTo(Produto,{
     allowNull: false
 })
 
+Usuario.hasMany(Compra,{
+    foreignKey: "fkusuarioId",
+    as: "usuarioCom",
+    onDelete: 'CASCADE'
+})
+
+Compra.belongsTo(Usuario,{
+    foreignKey: 'fkusuarioId',
+    as: 'usuarioId',
+    allowNull: false
+})
