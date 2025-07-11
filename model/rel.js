@@ -25,3 +25,5 @@ Compra.belongsTo(Usuario,{
     as: 'usuarioId',
     allowNull: false
 })
+
+module.exports = { Compra, Usuario, Compra }
