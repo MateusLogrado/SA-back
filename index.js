@@ -9,6 +9,10 @@ const hostname = 'localhost'
 
 const conn = require('./db/conn')
 
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
+app.use(cors())
+
 const compraController = require("./controller/compra.controller")
 const produtoController = require("./controller/produto.controller")
 const usuarioController = require("./controller/usuario.controller")
