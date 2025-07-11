@@ -33,6 +33,22 @@ const Compra = db.define("compra", {
     status: {
         type: DataTypes.STRING(30),
         allowNull: false
+    },
+    produto_id:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references:{
+            model: 'produtos',
+            key: 'produtoId'
+        }
+    },
+    usuario_id:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references:{
+            model: 'usuarios',
+            key: 'usuarioId'
+        }
     }
 }, {
     tableName: "compras",
