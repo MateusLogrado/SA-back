@@ -55,4 +55,19 @@ const atualizar = async (req,res)=>{
     }
 }
 
+const consultarId = async (req,res)=>{
+    let valor = req.params.id
+    try{
+        if(valor){
+            dados = await Compra.findAll({where: { fkusuarioId }})
+            res.status(200).json(dados);
+        }else{
+
+        }
+    }catch(err){
+        console.error('Erro ao listar os dados!',err)
+        res.status(500).json({message: 'Erro ao listar os dados!'})
+    }
+}
+
 module.exports = { cadastrar, listar, apagar, atualizar }
