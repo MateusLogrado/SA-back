@@ -108,8 +108,6 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'luigi','italiano',18,'luigibros@gmail.pasta','454541','italia','cogumelo','1474-02-14'),(2,'luigi','italiano',18,'luigibros@gmail.pasta','454541','italia','cogumelo','1474-02-14'),(3,'luigi','italiano',18,'luigibros@gmail.pasta','454541','italia','cogumelo','1474-02-14'),(4,'luigi','italiano',18,'luigibros@gmail.pasta','454541','italia','cogumelo','1474-02-14'),(5,'luigi','italiano',18,'luigibros@gmail.pasta','454541','italia','cogumelo','1474-02-14'),(6,'luigi','italiano',18,'luigibros@gmail.pasta','454541','italia','cogumelo','1474-02-14'),(7,'luigi','italiano',18,'luigibros@gmail.pasta','454541','italia','cogumelo','1474-02-14'),(8,'luigi','italiano',18,'luigibros@gmail.pasta','454541','italia','cogumelo','1474-02-14'),(9,'luigi','italiano',18,'luigibros@gmail.pasta','454541','italia','cogumelo','1474-02-14'),(10,'luigi','italiano',18,'luigibros@gmail.pasta','454541','italia','cogumelo','1474-02-14'),(11,'luigi','italiano',18,'luigibros@gmail.pasta','454541','italia','cogumelo','1474-02-14'),(12,'luigi','italiano',18,'luigibros@gmail.pasta','454541','italia','cogumelo','1474-02-14'),(13,'luigi','italiano',18,'luigibros@gmail.pasta','454541','italia','cogumelo','1474-02-14'),(14,'luigi','italiano',18,'luigibros@gmail.pasta','454541','italia','cogumelo','1474-02-14'),(15,'luigi','italiano',18,'luigibros@gmail.pasta','454541','italia','cogumelo','1474-02-14');
-/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
