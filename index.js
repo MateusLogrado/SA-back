@@ -21,11 +21,13 @@ app.post("/produto", produtoController.cadastrar)
 app.get("/produto", produtoController.listar)
 app.put("/produto/:id", produtoController.atualizar)
 app.delete("/produto/:id", produtoController.apagar)
+app.get("/produto/:id", produtoController.consultarId)
 
 app.post("/usuario", usuarioController.cadastrar)
 app.get("/usuario", usuarioController.listar)
 app.put("/usuario/:id", usuarioController.atualizar)
 app.delete("/usuario/:id", usuarioController.apagar)
+app.get("/usuario/:id", usuarioController.consultarId)
 
 app.post("/compra", compraController.cadastrar)
 app.get("/compra", compraController.listar)

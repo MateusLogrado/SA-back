@@ -55,19 +55,21 @@ const atualizar = async (req,res)=>{
     }
 }
 
-const consultarId = async (req,res)=>{
-    let valor = req.params.id
-    try{
-        if(valor){
-            dados = await Compra.findAll({where: { fkusuarioId }})
-            res.status(200).json(dados);
-        }else{
+const consultarId = async (req, res) => {
+    const usuarioId = req.params.id
 
+    try {
+        const usuario = await Usuario.findByPk(usuarioId)
+
+        if (usuario) {
+            res.status(200).json(usuario)
+        } else {
+            res.status(404).json({ message: "Compra com o ID " + usuarioId + " não encontrada." })
         }
-    }catch(err){
-        console.error('Erro ao listar os dados!',err)
-        res.status(500).json({message: 'Erro ao listar os dados!'})
+    } catch (err) {
+        console.error('Erro ao buscar o usuario!', err)
+        res.status(500).json({ message: "Erro interno ao processar a sua solicitação." })
     }
 }
 
-module.exports = { cadastrar, listar, apagar, atualizar }
+module.exports = { cadastrar, listar, apagar, atualizar, consultarId }
