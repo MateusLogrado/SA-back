@@ -64,7 +64,7 @@ const consultarId = async (req, res) => {
         if (usuario) {
             res.status(200).json(usuario)
         } else {
-            res.status(404).json({ message: "Compra com o ID " + usuarioId + " não encontrada." })
+            res.status(404).json({ message: "Usuario com o ID " + usuarioId + " não encontrada." })
         }
     } catch (err) {
         console.error('Erro ao buscar o usuario!', err)
