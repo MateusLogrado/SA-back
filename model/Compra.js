@@ -4,14 +4,15 @@ const db = require("../db/conn")
 const Compra = db.define("compra", {
     compraId: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        primaryKey: true,
+        autoIncrement: true
     },
     quant: {
         type: DataTypes.INTEGER,
         allowNull: false
     },
     dataCompra: {
-        type: DataTypes.DATE,
+        type: DataTypes.DATE(6),
         allowNull: false
     },
     unitario: {
