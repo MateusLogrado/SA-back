@@ -12,7 +12,7 @@ const Compra = db.define("compra", {
         allowNull: false
     },
     dataCompra: {
-        type: DataTypes.DATE(6),
+        type: DataTypes.DATEONLY,
         allowNull: false
     },
     unitario: {
