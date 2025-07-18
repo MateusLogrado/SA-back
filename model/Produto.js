@@ -8,11 +8,11 @@ const Produto = db.define("produto", {
         autoIncrement: true
     },
     title: {
-        type: DataTypes.STRING(35),
+        type: DataTypes.STRING(255),
         allowNull: false
     },
     description: {
-        type: DataTypes.STRING(300),
+        type: DataTypes.STRING(255),
         allowNull: false
     },
     category: {
@@ -33,10 +33,10 @@ const Produto = db.define("produto", {
     },
     brand: {
         type: DataTypes.STRING(20),
-        allowNull: false
+        allowNull: true
     },
     thumbnail: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(255),
         allowNull: false
     }
 }, {

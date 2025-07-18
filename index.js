@@ -33,6 +33,7 @@ app.post("/compra", compraController.cadastrar)
 app.get("/compra", compraController.listar)
 app.put("/compra/:id", compraController.atualizar)
 app.delete("/compra/:id", compraController.apagar)
+app	.get("/compra/:id", compraController.consultarId)
 
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())

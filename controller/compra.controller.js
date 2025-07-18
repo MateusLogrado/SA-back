@@ -55,4 +55,21 @@ const atualizar = async (req,res)=>{
     }
 }
 
-module.exports = { cadastrar, listar, apagar, atualizar }
+const consultarId = async (req, res) => {
+    const compraId = req.params.id
+
+    try {
+        const compra = await Compra.findByPk(compraId)
+
+        if (compra) {
+            res.status(200).json(compra)
+        } else {
+            res.status(404).json({ message: "Compra com o ID " + compraId + " não encontrada." })
+        }
+    } catch (err) {
+        console.error('Erro ao buscar o Compra!', err)
+        res.status(500).json({ message: "Erro interno ao processar a sua solicitação." })
+    }
+}
+
+module.exports = { cadastrar, listar, apagar, atualizar, consultarId }
