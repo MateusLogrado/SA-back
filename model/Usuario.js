@@ -27,6 +27,10 @@ const Usuario = db.define("usuario", {
         type: DataTypes.STRING(20),
         allowNull: false
     },
+    address: {
+        type: DataTypes.STRING(100),
+        allowNull: false
+    },
     city: {
         type: DataTypes.STRING(35),
         allowNull: false
